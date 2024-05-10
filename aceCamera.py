@@ -64,15 +64,15 @@ def update():
     canvas = tk.Canvas(window,width=600,height=480)
     canvas.grid(row=0,column=0,columnspan=3,padx=10,pady=10)
 
-    photo_button_image = ImageTk.PhotoImage(Image.open(r"D:\Core\BCA\Project\Final Year\Voice Assistant\GUI Images\Ace_Camera.png"), master=window)
+    photo_button_image = ImageTk.PhotoImage(Image.open(r"\GUI Images\Ace_Camera.png"), master=window)
     photo_button = tk.Button(window,image=photo_button_image,border=0,bg="#1c1c1c",activebackground="#1c1c1c")
     photo_button.grid(row=1,column=1,padx=15,pady=15)
 
-    record_button_image = ImageTk.PhotoImage(Image.open(r"D:\Core\BCA\Project\Final Year\Voice Assistant\GUI Images\Ace_Recording.png"), master=window)
+    record_button_image = ImageTk.PhotoImage(Image.open(r"\GUI Images\Ace_Recording.png"), master=window)
     record_button = tk.Button(window,image=record_button_image,border=0,bg="#1c1c1c",activebackground="#1c1c1c")
     record_button.grid(row=1,column=0,padx=10,pady=10,sticky='e')
 
-    stop_button_image = ImageTk.PhotoImage(Image.open(r"D:\Core\BCA\Project\Final Year\Voice Assistant\GUI Images\Ace_Stop_Recording.png"), master=window)
+    stop_button_image = ImageTk.PhotoImage(Image.open(r"\GUI Images\Ace_Stop_Recording.png"), master=window)
     stop_button = tk.Button(window,image=stop_button_image,border=0,bg="#1c1c1c",activebackground="#1c1c1c")
     stop_button.grid(row=1,column=2,padx=10,pady=10,sticky='w')
 
