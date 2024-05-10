@@ -619,7 +619,7 @@ def login_menu():
     back.config(command=lambda: back_function())
     back.grid(in_=login_frame,row=5,column=0,padx=5,pady=5,sticky='E')
 
-ace_icon = ImageTk.PhotoImage(file=r"D:\Core\BCA\Project\Final Year\Voice Assistant\GUI Images\Ace_Icon_Logo.png")
+ace_icon = ImageTk.PhotoImage(file=r"\GUI Images\Ace_Icon_Logo.png")
 root.title("ACE")
 root.config(bg="#232324")
 root.iconphoto(False,ace_icon)
@@ -638,19 +638,19 @@ volume_label = tk.Label(text="Volume:",font=("Consolas",12,"bold"),bg="#1c1c1c",
 voice_speed_label = tk.Label(text="Voice Speed:",font=("Consolas",12,"bold"),bg="#1c1c1c",fg="#8C52FF")
 theme_label = tk.Label(text="Theme:",font=("Consolas",12,"bold"),bg="#1c1c1c",fg="#8C52FF")
  
-ace_button_image = ImageTk.PhotoImage(Image.open(r"D:\Core\BCA\Project\Final Year\Voice Assistant\GUI Images\Ace_Logo.png"))
+ace_button_image = ImageTk.PhotoImage(Image.open(r"\GUI Images\Ace_Logo.png"))
 ace_button = tk.Button(image=ace_button_image,border=0,bg="#1c1c1c",activebackground="#1c1c1c")
 
-setting_button_image = ImageTk.PhotoImage(Image.open(r"D:\Core\BCA\Project\Final Year\Voice Assistant\GUI Images\Setting_Logo.png"))
+setting_button_image = ImageTk.PhotoImage(Image.open(r"\GUI Images\Setting_Logo.png"))
 setting_button = tk.Button(image=setting_button_image,border=0,bg="#1c1c1c",activebackground="#1c1c1c")
 
-chat_button_image = ImageTk.PhotoImage(Image.open(r"D:\Core\BCA\Project\Final Year\Voice Assistant\GUI Images\Ace_Chat.png"))
+chat_button_image = ImageTk.PhotoImage(Image.open(r"\GUI Images\Ace_Chat.png"))
 chat_button = tk.Button(image=chat_button_image,border=0,bg="#1c1c1c",activebackground="#1c1c1c")
 
-send_button_image = ImageTk.PhotoImage(Image.open(r"D:\Core\BCA\Project\Final Year\Voice Assistant\GUI Images\Send_Logo.png"))
+send_button_image = ImageTk.PhotoImage(Image.open(r"\GUI Images\Send_Logo.png"))
 send_button = tk.Button(image=send_button_image,border=0,bg="#1c1c1c",activebackground="#1c1c1c")
 
-back_button_image = ImageTk.PhotoImage(Image.open(r"D:\Core\BCA\Project\Final Year\Voice Assistant\GUI Images\Back_Logo.png"))
+back_button_image = ImageTk.PhotoImage(Image.open(r"\GUI Images\Back_Logo.png"))
 back_button = tk.Button(image=back_button_image,border=0,bg="#1c1c1c",activebackground="#1c1c1c")
 
 login_button = tk.Button(text="",border=0,fg="#1c1c1c",bg="#8C52FF",activeforeground="#1c1c1c",activebackground="#8C52FF",font=("Bahnschrift",16),width=8)
