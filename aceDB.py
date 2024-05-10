@@ -8,13 +8,13 @@ cur = ""
 
 def connect_database():
     global conn, cur, db_pass
-    db_pass = os.environ.get('DB_KEY')
+    db_pass = os.environ.get('YOUR_DB_KEY')
     conn = psycopg2.connect(
-        dbname="acedb",
-        user="postgres",
+        dbname="your_database",
+        user="your_username",
         password=db_pass,
-        host="localhost",
-        port="5432"
+        host="your_host",
+        port="your_port"
     )
     cur = conn.cursor()
 
@@ -64,7 +64,7 @@ def logOut(uname,voice,volume,theme,content):
 def checkUser(uname):
     try:
         connect_database()
-        query = '''SELECT * FROM acelogin WHERE username=%s;'''
+        query = '''SELECT * FROM userlogin WHERE username=%s;'''
         cur.execute(query,(uname,))
         result = cur.fetchone()
         conn.close()
@@ -79,7 +79,7 @@ def checkUser(uname):
 def login_user(uname,pword):
     try:
         connect_database()
-        query = '''SELECT password FROM acelogin WHERE username=%s;'''
+        query = '''SELECT password FROM userlogin WHERE username=%s;'''
         cur.execute(query,(uname,))
         result = cur.fetchone()[0]
         conn.close()
@@ -103,7 +103,7 @@ def add_user(uname,pword):
     try:
         connect_database()
         new_pass = hash_pass(pword)
-        query = '''INSERT INTO acelogin(username,password) VALUES (%s,%s);'''
+        query = '''INSERT INTO userlogin(username,password) VALUES (%s,%s);'''
         cur.execute(query,(uname,new_pass))        
         conn.commit()
         conn.close()
